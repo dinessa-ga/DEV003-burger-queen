@@ -1,4 +1,5 @@
 import styles from '@/styles/Home.module.css'
+import { useState } from 'react';
 /* eslint-disable @next/next/no-img-element */
 // import { Html, Head, Main, NextScript } from 'next/document'
 
@@ -13,10 +14,12 @@ const stockBreakfast = [
 ]
 
 export default function Breakfast() {
+
   const selectedProducts = [];
   const handleClick = (product) => {
     selectedProducts.push(product);
     console.log(selectedProducts)
+    // selectedProducts([nuevoProducto])
   }
 
   return (

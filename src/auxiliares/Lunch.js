@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from '@/styles/Home.module.css'
-
+import AddOrder from './AddOrd'
+import { useState } from 'react';
 
 // import '@/styles/globals.css'
 
@@ -21,6 +22,13 @@ const products = [
 ];
 
 export default function Lunch() {
+
+    const [productos, setProductos] = useState([])
+
+    const agregarProductos = () => {
+
+    }
+
     return (
         <section className={styles.bg_lunch}>
             <ul className={styles.ul}>
@@ -45,12 +53,7 @@ export default function Lunch() {
                                 <h4>{product.title}</h4>
                                 <p>{product.costo}</p>
                             </div>
-                            <button style={{
-                                color: product.stock ? 'white' : 'black',
-                                background: product.stock ? '#F8A000' : 'grey'
-                            }}>
-                                {product.stock ? 'AGREGAR' : 'SIN STOCK'}
-                            </button>
+                            <AddOrder />
                         </li>)
                 }
             </ul>
