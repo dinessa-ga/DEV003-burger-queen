@@ -1,47 +1,16 @@
-import { useState } from 'react';
+import styles from '@/styles/Home.module.css'
 
-export function Counter(){
-
-  const [orderCount, setOrderCount] = useState(0);
-
-    return (
+export function Add(){
+    return(
         <>
-        <div className={styles.items_quantity} >
-            <button className={styles.buttonCount}
-              onClick={() => {setOrderCount(orderCount - 1) }}>-</button>
-            <p> {orderCount}</p>
-            <button className={styles.buttonCount} onClick={() => setOrderCount(orderCount + 1)}>+</button>
-        </div>
+        <button className={styles.btn_agregar}>AGREGAR</button>
         </>
     )
 }
 
-export function AddProduct({onClick}){
-  return(
-    <>
-    <button onClick={onClick}>AGREGAR</button>
-    </>
-  )
+export function Counter(){
+    return(
+        <>
+        </>
+    )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

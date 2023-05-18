@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import styles from '@/styles/Home.module.css'
-import Lunch from './Lunch.js';
-import Breakfast from './Breakfast.js'
-import AddOrder from './AddOrd'
+
 
 export default function Order(props) {
 
@@ -21,7 +19,7 @@ export default function Order(props) {
       <div className={styles.data_order}>
         <h3 className={styles.h3}>DATOS DEL PEDIDO</h3>
         <div className={styles.order_group}>  <br></br>
-          <p>{Breakfast.selectedProducts}</p>
+          
 
           <div className={styles.items_quantity} >
             <button className={styles.buttonCount}
